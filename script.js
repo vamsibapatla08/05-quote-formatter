@@ -11,9 +11,14 @@ form.addEventListener("submit", function(event) {
 	const verb = document.getElementById("verb").value;
 	const adjective = document.getElementById("adjective").value;
 
-	// Format the sentence using string concatenation
-	const sentence = "The " + adjective + " " + noun + " had one goal: to " + verb + ". What happened next was unexpected.";
+	// Format the sentence using a template literal for clarity and simplicity
+	const sentence = `${verb}ing ${adjective} ${noun} is the real test of character. #LifeRules`;
 
 	// Display the result
 	result.textContent = sentence;
+
+	// Clear the input fields
+	document.getElementById("noun").value = "";
+	document.getElementById("verb").value = "";
+	document.getElementById("adjective").value = "";
 });
